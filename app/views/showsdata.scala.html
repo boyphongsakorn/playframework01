@@ -1,0 +1,40 @@
+@(pcdesktopList:List[pcdesktop])
+<h1>Store Into</h1>
+<table class="table table-dark">
+    <thead>
+    <tr>
+        <th scope="col">Brand</th>
+        <th scope="col">Mainboard</th>
+        <th scope="col">CPU</th>
+        <th scope="col">RAM</th>
+        <th scope="col">STORAGE</th>
+        <th scope="col">PSU</th>
+        <th scope="col">CASE</th>
+        <th scope="col">จำนวนที่ซื้อ</th>
+        <th scope="col">ราคาต่อเครื่อง</th>
+        <th scope="col">ได้รับส่วนลด</th>
+        <th scope="col">ราคาร่วมทั้งหมด</th>
+        <th scope="col">จะได้รับส่วนลด</th>
+        <th scope="col">ราคาหลังหักส่วนลด</th>
+    </tr>
+    </thead>
+    <tbody>
+    @for(store <- pcdesktopList) {
+    <tr>
+        <td>@store.getBrand</td>
+        <td>@store.getMainboard</td>
+        <td>@store.getCpu</td>
+        <td>@store.getRam</td>
+        <td>@store.getStorage</td>
+        <td>@store.getPsu</td>
+        <td>@store.getPccase</td>
+        <td>@store.getPrecount</td>
+        <td>@store.getPrice</td>
+        <td>@store.getDiscount</td>
+        <td>@store.sumprice()</td>
+        <td>@store.caldiscount()</td>
+        <td>@(store.sumprice()-store.caldiscount())</td>
+    </tr>
+    }
+    </tbody>
+</table>

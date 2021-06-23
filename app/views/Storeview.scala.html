@@ -1,0 +1,33 @@
+@(StoreData:inside)
+<center>
+    <table width="70%" style="background-color: red">
+        <tr>
+            <th>ชื่อร้าน</th>
+            <td>@StoreData.getStorename()</td>
+        </tr>
+        <tr>
+            <th>ที่อยู่ร้าน</th>
+            <td>@StoreData.getStore_address()</td>
+        </tr>
+        <tr>
+            <th>ประเภทของร้าน</th>
+            <td>@StoreData.getStore_type()</td>
+        </tr>
+        <tr>
+            <th>เบอร์โทรศัพท์ร้าน</th>
+            <td>@StoreData.getStore_phone()</td>
+        </tr>
+        <tr>
+            <th>วันที่เปิดร้าน</th>
+            <td>@StoreData.getStore_opendate()</td>
+        </tr>
+        <tr>
+            <th>1สัปดาห์ร้านเปิดกี่วัน</th>
+            <td>@StoreData.getStore_size()</td>
+        </tr>
+        <tr>
+            <th>พื้นที่ของร้าน</th>
+            <td>@StoreData.getStore_openofweek()</td>
+        </tr>
+    </table>
+</center>

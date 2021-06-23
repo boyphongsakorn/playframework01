@@ -1,0 +1,9 @@
+@(ramList:List[ram])
+<h1>Ram Into</h1>
+@for(ram <- ramList) {
+แบรด์ @ram.getBrand <br>
+บัสของแรม @ram.getBus <br>
+ชิปของแรม @ram.getChips <br>
+ขนาดของแรม @ram.getMesize <br>
+<img src="http://localhost:9000/assets/images/uploads/@ram.getImg" class="rounded" style="width: 200px">
+}

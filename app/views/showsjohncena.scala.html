@@ -1,0 +1,26 @@
+@(iphoneList:List[iphone])
+<h1>Store Into</h1>
+<table class="table table-dark">
+    <thead>
+    <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Screen Size</th>
+        <th scope="col">Ram</th>
+        <th scope="col">Storge Size</th>
+        <th scope="col">Price</th>
+        <th scope="col">Ramname</th>
+    </tr>
+    </thead>
+    <tbody>
+    @for(store <- iphoneList) {
+    <tr>
+        <td>@store.getName</td>
+        <td>@store.getScrsize</td>
+        <td>@store.getRam</td>
+        <td>@store.getStorsize</td>
+        <td>@store.getPrice</td>
+        <td>@store.getRamname</td>
+    </tr>
+    }
+    </tbody>
+</table>

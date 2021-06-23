@@ -1,0 +1,20 @@
+@(frmStore:Form[pcdesktop])
+@import helper._
+@import helper.twitterBootstrap._
+
+<h1>New PC Desktop Data (Helper)</h1>
+
+@helper.form(action = routes.Application.poststoreHelper()) {
+    @inputText(frmStore("brand"), '_label->"Brand", 'size->"20", 'required->"required", 'class->"form-control")
+    @inputText(frmStore("mainboard"), '_label->"Mainboard", 'size->"20", 'required->"required", 'class->"form-control")
+    @inputText(frmStore("cpu"), '_label->"CPU", 'size->"20", 'required->"required", 'class->"form-control")
+    @inputText(frmStore("ram"), '_label->"RAM", 'size->"20", 'required->"required", 'class->"form-control")
+    @inputText(frmStore("storage"), '_label->"STORAGE", 'size->"20", 'required->"required", 'class->"form-control")
+    @inputText(frmStore("psu"), '_label->"PSU", 'size->"20", 'required->"required", 'class->"form-control")
+    @inputText(frmStore("pccase"), '_label->"CASE", 'size->"20", 'required->"required", 'class->"form-control")
+    @inputText(frmStore("precount"), '_label->"จำนวนที่ซื้อ", 'size->"20", 'required->"required", 'class->"form-control")
+    @inputText(frmStore("price"), '_label->"ราคาต่อเครื่อง", 'size->"20", 'required->"required", 'class->"form-control")
+    @inputText(frmStore("discount"), '_label->"ส่วนลด/ส่วนลดที่ลูกค้าขอ", 'size->"20", 'required->"required", 'class->"form-control")
+        <button type="submit" class="btn btn-primary">ส่งค่า</button>
+        <button type="reset" class="btn btn-primary">รีเซ็ต</button>
+}

@@ -1,0 +1,20 @@
+@(pagename: String)
+<!--div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+    <a class="nav-link" data-toggle="pill" href="/" role="tab" aria-controls="v-pills-home" aria-selected="true"></a>
+    <a class="nav-link" data-toggle="pill" href="/Storeview" role="tab" aria-controls="v-pills-profile" aria-selected="false"></a>
+    <a class="nav-link" data-toggle="pill" href="/showsdata" role="tab" aria-controls="v-pills-profile" aria-selected="false"></a>
+    <a class="nav-link" data-toggle="pill" href="/product" role="tab" aria-controls="v-pills-profile" aria-selected="false"></a>
+</div-->
+<nav class="nav flex-column nav-pills">
+
+    <a class="nav-link @if(pagename=="index"){active}" href="/">หน้าแรก</a>
+    <a class="nav-link @if(pagename=="Storeview"){active}" href="/Storeview">ข้อมูลร้าน</a>
+    <a class="nav-link @if(pagename=="showsdata"){active}" href="/showsdata">แสดงข้อมูลร้านทั้งหมด</a>
+    <a class="nav-link @if(pagename=="product"){active}" href="/product">คำนวณ</a>
+    <a class="nav-link @if(pagename=="inputstore"){active}" href="/inputstore">ส่งข้อมูลร้าน</a>
+    <a class="nav-link @if(pagename=="inputHelper"){active}" href="/inputstoreHelper">ส่งข้อมูลร้าน (Helper)</a>
+    <a class="nav-link @if(pagename=="frmupload"){active}" href="/frmupload">อัปโหลด รูปภาพ</a>
+    <a class="nav-link @if(pagename=="mufrmupload"){active}" href="/frmuploadmult">อัปโหลด รูปภาพ (หลายรูป)</a>
+    <a class="nav-link @if(pagename=="ramupload"){active}" href="/ramimage">อัปโหลด แรม (รูป)</a>
+    <a class="nav-link @if(pagename=="showsjohncena"){active}" href="/showsjohncena">แสดงข้อมูลทั้งหมด (เชื่อมตาราง)</a>
+</nav>
